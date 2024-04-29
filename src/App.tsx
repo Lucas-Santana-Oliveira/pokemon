@@ -1,6 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Navbar from "./sections/Navbar";
 import Footer from "./sections/Footer";
+
 import Background from "./components/Background";
 import "./scss/index.scss";
 import { Suspense, lazy, useEffect } from "react";
@@ -20,7 +21,6 @@ const Pokemon = lazy(() => import("./pages/Pokemon"));
 export default function App() {
   const { toasts } = useAppSelector(({ app }) => app);
   const dispatch = useAppDispatch();
-
   useEffect(() => {
     onAuthStateChanged(firebaseAuth, (currentUser) => {
       if (currentUser) {
@@ -28,7 +28,6 @@ export default function App() {
       }
     });
   }, [dispatch]);
-
   useEffect(() => {
     if (toasts.length) {
       const toastOptions: ToastOptions = {
