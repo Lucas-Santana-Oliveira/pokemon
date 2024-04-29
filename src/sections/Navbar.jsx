@@ -8,11 +8,11 @@ export default function Navbar() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const navigationRoutes = [
     {
-      name: "Search",
+      name: "Pesquisar",
       route: "/search",
     },
     {
-      name: "Compare",
+      name: "Comparar",
       route: "/compare",
     },
     {
@@ -20,7 +20,7 @@ export default function Navbar() {
       route: "/pokemon",
     },
     {
-      name: "My List",
+      name: "Minha Lista",
       route: "/list",
     },
     

@@ -16,5 +16,5 @@ const app = initializeApp(firebaseConfig);
 export const firebaseAuth = getAuth(app);
 export const firebaseDB = getFirestore(app);
 
-export const usersRef = collection(firebaseDB, "users");
-export const pokemonListRef = collection(firebaseDB, "pokemonList");
+export const usersRef = collection(firebaseDB, "Usuario");
+export const pokemonListRef = collection(firebaseDB, "Lista de pokemon");

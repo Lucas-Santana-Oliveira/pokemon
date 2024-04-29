@@ -41,7 +41,7 @@ function CompareContainer({
     return (
       <>
         <div className="pokemon-types">
-          <h4 className="pokemon-type-title">Strength</h4>
+          <h4 className="pokemon-type-title">Forte</h4>
           <div className="pokemon-type-icons">
             {createStatsArray(pokemon?.types!, "strength").map(
               (stat: { image: string }) => (
@@ -53,7 +53,7 @@ function CompareContainer({
           </div>
         </div>
         <div className="pokemon-types">
-          <h4 className="pokemon-type-title">Weakness</h4>
+          <h4 className="pokemon-type-title">Fraco</h4>
           <div className="pokemon-type-icons">
             {createStatsArray(pokemon?.types!, "weakness").map(
               (stat: { image: string }) => (
@@ -65,7 +65,7 @@ function CompareContainer({
           </div>
         </div>
         <div className="pokemon-types">
-          <h4 className="pokemon-type-title">Resistance</h4>
+          <h4 className="pokemon-type-title">Resistente</h4>
           <div className="pokemon-type-icons">
             {createStatsArray(pokemon?.types!, "resistance").map(
               (stat: { image: string }) => (
@@ -77,7 +77,7 @@ function CompareContainer({
           </div>
         </div>
         <div className="pokemon-types">
-          <h4 className="pokemon-type-title">Vulnerable</h4>
+          <h4 className="pokemon-type-title">Vulneravel</h4>
           <div className="pokemon-type-icons">
             {createStatsArray(pokemon?.types!, "vulnerable").map(
               (stat: { image: string }) => (
@@ -98,7 +98,7 @@ function CompareContainer({
           <button onClick={() => navigate("/search")}>
             <FaPlus />
           </button>
-          <h3>Add Pokemon for Comparison</h3>
+          <h3>Adicione Pokémon para comparação</h3>
         </div>
       )}
       {pokemon && (
@@ -114,7 +114,7 @@ function CompareContainer({
             </div>
             <div className="pokemon-types-container">
               <div className="pokemon-types">
-                <h4 className="pokemon-type-title">Type</h4>
+                <h4 className="pokemon-type-title">Tipo</h4>
                 <div className="pokemon-type-icons">
                   {pokemon?.types.map((type: pokemonTypeInterface) => {
                     const keys = Object.keys(type);
@@ -141,13 +141,13 @@ function CompareContainer({
                 dispatch(addPokemonToList(pokemon));
               }}
             >
-              Add
+              Adicionar
             </button>
             <button
               className="compare-btn"
               onClick={() => navigate(`/pokemon/${pokemon?.id}`)}
             >
-              View
+              Ver
             </button>
             <button
               className="compare-btn"

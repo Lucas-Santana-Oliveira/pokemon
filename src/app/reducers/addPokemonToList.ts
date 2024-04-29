@@ -11,7 +11,7 @@ import {
 import { RootState } from "../store";
 
 export const addPokemonToList = createAsyncThunk(
-  "pokemon/addPkemon",
+  "pokemon/adicionar Pokemon",
   async (
     pokemon: {
       id: number;
@@ -28,7 +28,7 @@ export const addPokemonToList = createAsyncThunk(
       } = getState() as RootState;
       if (!userInfo?.email) {
         return dispatch(
-          setToast("Please login in order to add pokemon to your collection.")
+          setToast("Faça login para adicionar Pokémon à sua coleção.")
         );
       }
       const index = userPokemons.findIndex((userPokemon: userPokemonsType) => {
@@ -48,9 +48,9 @@ export const addPokemonToList = createAsyncThunk(
           email: userInfo.email,
         });
         await dispatch(getUserPokemons());
-        dispatch(setToast(`${pokemon.name} added to your collection.`));
+        dispatch(setToast(`${pokemon.name} adicionado à sua coleção.`));
       } else {
-        dispatch(setToast(`${pokemon.name} already part of your collection.`));
+        dispatch(setToast(`${pokemon.name} já faz parte da sua coleção.`));
       }
     } catch (err) {
       console.log({ err });

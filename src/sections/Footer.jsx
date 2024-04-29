@@ -16,24 +16,24 @@ export default function Footer() {
   const logOutUser = () => {
     signOut(firebaseAuth);
     dispatch(setUserStatus(undefined));
-    dispatch(setToast("Logged out successfully from Firebase"));
+    dispatch(setToast("Desconectado do Firebase com sucesso"));
   };
   const routes = [
     {
       name: pokemonTabs.description,
-      value: "Description",
+      value: "Descrição",
     },
     {
       name: pokemonTabs.evolution,
-      value: "Evolution",
+      value: "Evolução",
     },
     {
       name: pokemonTabs.locations,
-      value: "Catching",
+      value: "Localização",
     },
     {
       name: pokemonTabs.moves,
-      value: "Capable Moves",
+      value: "Tipos de Movimentos",
     },
   ];
   return (

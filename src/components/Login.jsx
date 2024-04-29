@@ -29,7 +29,7 @@ function Login() {
   return (
     <div className="login">
       <button onClick={handleLogin} className="login-btn">
-        <FcGoogle /> Login with Google
+        <FcGoogle /> Login com Google
       </button>
     </div>
   );

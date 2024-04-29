@@ -6,7 +6,7 @@ import { defaultImages, images, pokemonTypes } from "../../utils";
 import { generatedPokemonType, genericPokemonType } from "../../utils/types";
 
 export const getPokemonsData = createAsyncThunk(
-  "pokemon/randomPokemon",
+  "pokemon/Pokemon Aleatório",
   async (pokemons: genericPokemonType[]) => {
     try {
       const pokemonsData: generatedPokemonType[] = [];

@@ -5,7 +5,7 @@ import { defaultImages, images, pokemonTypes } from "../../utils";
 import { RootState } from "../store";
 import { userPokemonsType } from "../../utils/types";
 export const getUserPokemons = createAsyncThunk(
-  "pokemon/userList",
+  "pokemon/Lista de usuários",
   async (args, { getState }) => {
     try {
       const {

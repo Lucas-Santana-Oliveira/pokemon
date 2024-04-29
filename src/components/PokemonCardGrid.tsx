@@ -39,7 +39,7 @@ function PokemonCardGrid({ pokemons }: { pokemons: userPokemonsType[] }) {
                         await dispatch(
                           removePokemonFromUserList({ id: data.firebaseId! })
                         );
-                        dispatch(setToast("Pokemon Removed Successfully."));
+                        dispatch(setToast("Pokemon Removido com Sucesso."));
                       }}
                     />
                   )}
@@ -50,7 +50,7 @@ function PokemonCardGrid({ pokemons }: { pokemons: userPokemonsType[] }) {
                       dispatch(addToCompare(data));
                       dispatch(
                         setToast(
-                          `${data.name} has been added to compare queue.`
+                          `${data.name} foi adicionado à fila de comparação.`
                         )
                       );
                     }}

@@ -3,7 +3,7 @@ import axios from "axios";
 import { pokemonsRoute } from "../../utils/constants";
 
 export const getInitialPokemonData = createAsyncThunk(
-  "pokemon/initialData",
+  "pokémon/dados iniciais",
   async () => {
     try {
       const { data } = await axios.get(pokemonsRoute);

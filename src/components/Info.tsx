@@ -34,10 +34,10 @@ export default function Info({
     <>
       <div className="details">
         <h1 className="name">{data?.name}</h1>
-        <h3>Type: {data?.types.join(" - ")}</h3>
-        <h3>Evolution: {data?.evolutionLevel}</h3>
+        <h3>tipo: {data?.types.join(" - ")}</h3>
+        <h3>Evolução: {data?.evolutionLevel}</h3>
         <button onClick={() => dispatch(setPokemonTab(pokemonTabs.evolution))}>
-          See next evolution
+        Próxima evolução
         </button>
       </div>
       <div className="stats">
@@ -56,7 +56,7 @@ export default function Info({
         {
           <ul>
             <li>
-              <span>Strengths:</span>
+              <span>Forte contra:</span>
               <span>
                 {createStatsArray(
                   data?.types as unknown as string[],
@@ -65,7 +65,7 @@ export default function Info({
               </span>
             </li>
             <li>
-              <span>Weakness:</span>
+              <span>Fraco contra:</span>
               <span>
                 {createStatsArray(
                   data?.types as unknown as string[],
@@ -74,7 +74,7 @@ export default function Info({
               </span>
             </li>
             <li>
-              <span>Resistant:</span>
+              <span>Resistente contra:</span>
               <span>
                 {createStatsArray(
                   data?.types as unknown as string[],
@@ -83,7 +83,7 @@ export default function Info({
               </span>
             </li>
             <li>
-              <span>Vulnerable:</span>
+              <span>Vunerável contra:</span>
               <span>
                 {createStatsArray(
                   data?.types as unknown as string[],
@@ -97,7 +97,7 @@ export default function Info({
           onClick={() => dispatch(addPokemonToList(data!))}
           className="add-pokemon"
         >
-          Add Pokemon
+          Adicionar Pokemon
         </button>
       </div>
     </>
